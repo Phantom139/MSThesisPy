@@ -4,7 +4,7 @@ import os
 import numpy as np
 from netCDF4 import Dataset
 
-file = 'test.nc'
+file = '/media/robert/HDD/WRF/NCEditing/test.nc'
 
 def run():
 	nc = Dataset(file, mode='r')
