@@ -1,0 +1,6 @@
+1. Place all .png output files in one dir.
+
+2. open a terminal and cd to that dir.
+
+3. Run command: convert -delay timeinms -loop 0 *.png outfilename.gif
+

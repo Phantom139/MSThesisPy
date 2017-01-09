@@ -10,5 +10,13 @@ function main(args)
  fDy = subwrd(args,6)
  fHr = subwrd(args,7)
 * Run All Plots:
+'say Running Plot Scripts, Arguments: 'ctlFile' 'modelHr' 'domain' 'fYr' 'fMo' 'fDy' 'fHr
+'say Surface Plot'
 * Surface Map
 'run /media/robert/HDD/WRF/Plotting/grads_scripts/surface_map.gs 'ctlFile' 'modelHr' 'domain' 'fYr' 'fMo' 'fDy' 'fHr
+* Snowfall
+'say Snowfall Plot'
+'run /media/robert/HDD/WRF/Plotting/grads_scripts/snow_accumulation.gs 'ctlFile' 'modelHr' 'domain' 'fYr' 'fMo' 'fDy' 'fHr
+* Radar
+'say Simulated Reflectivity'
+'run /media/robert/HDD/WRF/Plotting/grads_scripts/simulated_radar.gs 'ctlFile' 'modelHr' 'domain' 'fYr' 'fMo' 'fDy' 'fHr

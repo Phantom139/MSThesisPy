@@ -1,5 +1,4 @@
-* Surface Map
-* MSLP, Temperature, and Winds
+* Simulated Radar Reflectivity
 * By: Robert C. Fritzen
 function main(args)
  ctlFile = subwrd(args,1)
@@ -9,27 +8,23 @@ function main(args)
  fMo = subwrd(args,5)
  fDy = subwrd(args,6)
  fHr = subwrd(args,7)
- level = 'surface'
- filename = 'sfcmap_'domain'_'modelHr'.png'
+ filename = 'simradar_'domain'_'modelHr'.png'
  'run /media/robert/HDD/WRF/Plotting/functions/pltdefaults.gs'
 'open 'ctlFile
 'set datawarn off'
-'run /media/robert/HDD/WRF/Plotting/colorbars/color.gs -30 115 2.5 -kind darkseagreen->lightgray->lightsteelblue->magenta->mediumblue->cyan->green->yellow->orange->red->maroon->magenta->white'
 'set gxout shade2'
+'run /media/robert/HDD/WRF/Plotting/colorbars/color.gs 0 80 2.5 -kind white-(0)->white-(0)->lightgray-(5)->(4,70,28)-(5)->(4,234,28)-(0)->(252,238,4)-(4)->(236,130,4)-(0)->(244,46,4)-(4)->maroon-(0)->magenta->gray->lightgray'
 'run /media/robert/HDD/WRF/Plotting/functions/draw_states.gs'
-* Draw Temperature
-'d (TMP2m-273.16)*9/5+32'
-* Draw MSLP Contour Lines
+* Draw Radar
+'d REFCclm'
+* Draw MSLP / Centers
 'set gxout contour'
 'set ccolor 0'
 'set cint 2'
 'set clab masked'
 'd MSLETmsl/100'
-* Draw Wind Barbs
-'run /media/robert/HDD/WRF/Plotting/functions/windbarbs.gs 'level' 20 20'
-* Draw Pressure Centers
 * 'run /media/robert/HDD/WRF/Plotting/functions/HI_LOW.gs'
-* Finalize the Image
+* Finalize Image
 'run /media/robert/HDD/WRF/Plotting/functions/pltcolorbar.gs -ft 1 -fy 0.33 -line on -fskip 2 -fh .1 -fw .1 -lc 99 -edge triangle -fc 99'
-'run /media/robert/HDD/WRF/Plotting/functions/draw_title.gs `42m Temp (`3.`4F) | 10m Wind (kts) | MSLP (mb) | Valid: 'fMo'/'fDy'/'fYr' 'fHr':00:00 Z | WRF ARW V3.8 | M.S. Thesis Robert C. Fritzen'
+'run /media/robert/HDD/WRF/Plotting/functions/draw_title.gs Simulated Radar Reflectivity (DBZ) | Valid: 'fMo'/'fDy'/'fYr' 'fHr':00:00 Z | WRF ARW V3.8 | M.S. Thesis Robert C. Fritzen'
 'run /media/robert/HDD/WRF/Plotting/functions/make_image.gs 'filename
