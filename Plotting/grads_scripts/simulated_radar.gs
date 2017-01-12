@@ -12,6 +12,7 @@ function main(args)
  'run /media/robert/HDD/WRF/Plotting/functions/pltdefaults.gs'
 'open 'ctlFile
 'set datawarn off'
+'set t 'modelHr+1
 'set gxout shade2'
 'run /media/robert/HDD/WRF/Plotting/colorbars/color.gs 0 80 2.5 -kind white-(0)->white-(0)->lightgray-(5)->(4,70,28)-(5)->(4,234,28)-(0)->(252,238,4)-(4)->(236,130,4)-(0)->(244,46,4)-(4)->maroon-(0)->magenta->gray->lightgray'
 'run /media/robert/HDD/WRF/Plotting/functions/draw_states.gs'

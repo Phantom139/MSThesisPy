@@ -13,6 +13,7 @@ function main(args)
  'run /media/robert/HDD/WRF/Plotting/functions/pltdefaults.gs'
 'open 'ctlFile
 'set datawarn off'
+'set t 'modelHr+1
 'set gxout shade2'
 'run /media/robert/HDD/WRF/Plotting/colorbars/color.gs 0 1000 500 -kind white->white'
 'd TMP2m'
