@@ -10,7 +10,7 @@ export WRFPATH=${WRF_DIR}/gcc/WRFV3
 export UNIPOST_HOME=${TOP_DIR}/UPPV3.0
 export POSTEXEC=${UNIPOST_HOME}/bin
 export SCRIPTS=${UNIPOST_HOME}/scripts
-export modelDataPath=${DOMAINPATH}/postrun_snowenh2            # or nemsprd
+export modelDataPath=${DOMAINPATH}/postrun_snowench            # or nemsprd
 export paramFile=${PLOT_DIR}/wrf_cntrl.parm          # or nmb_cntrl.parm
 export productsFolder=${PLOT_DIR}/product_images
 export GIFsFolder=${productsFolder}/GIFs
@@ -24,11 +24,11 @@ export inFormat="netcdf"
 export outFormat="grib"
 
 # Set date/time, domain information
-export startdate=2009010900
+export startdate=2009021212
 export fhr=00
 export lastfhr=60
 export incrementhr=01
-export domain_list="d01"
+export domain_list="d02"
 export RUN_COMMAND="mpirun -np 12 ${POSTEXEC}/unipost.exe "
 
 export cleanImagesOnRun="1"

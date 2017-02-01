@@ -1,0 +1,472 @@
+robert@Robert-Linux:/media/robert/HDD/WRF/Plotting$ ./run_unipostandgrads 
++ PLOT_DIR=/media/robert/HDD/WRF/Plotting
++ export PLOT_DIR
++ TOP_DIR=/media/robert/HDD/WRF
++ export TOP_DIR
++ DOMAINPATH=/media/robert/HDD/WRF/MSThesis
++ export DOMAINPATH
++ WRFPATH=/media/robert/HDD/WRF/gcc/WRFV3/gcc/WRFV3
++ export WRFPATH
++ UNIPOST_HOME=/media/robert/HDD/WRF/UPPV3.0
++ export UNIPOST_HOME
++ POSTEXEC=/media/robert/HDD/WRF/UPPV3.0/bin
++ export POSTEXEC
++ SCRIPTS=/media/robert/HDD/WRF/UPPV3.0/scripts
++ export SCRIPTS
++ modelDataPath=/media/robert/HDD/WRF/MSThesis/postrun_snowench
++ export modelDataPath
++ paramFile=/media/robert/HDD/WRF/Plotting/wrf_cntrl.parm
++ export paramFile
++ productsFolder=/media/robert/HDD/WRF/Plotting/product_images
++ export productsFolder
++ GIFsFolder=/media/robert/HDD/WRF/Plotting/product_images/GIFs
++ export GIFsFolder
++ dyncore=ARW
++ export dyncore
++ inFormat=netcdf
++ export inFormat
++ outFormat=grib
++ export outFormat
++ startdate=2009021212
++ export startdate
++ fhr=00
++ export fhr
++ lastfhr=60
++ export lastfhr
++ incrementhr=01
++ export incrementhr
++ domain_list=d02
++ export domain_list
++ RUN_COMMAND='mpirun -np 12 /media/robert/HDD/WRF/UPPV3.0/bin/unipost.exe '
++ export RUN_COMMAND
++ cleanImagesOnRun=1
++ export cleanImagesOnRun
++ copygb_opt=lambert
++ export copygb_opt
++ tmmark=tm00
++ export tmmark
++ MP_SHARED_MEMORY=yes
++ export MP_SHARED_MEMORY
++ MP_LABELIO=yes
++ export MP_LABELIO
++ [ 1 '=' 1 ]
++ rm '/media/robert/HDD/WRF/Plotting/product_images/*.png'
+rm: cannot remove '/media/robert/HDD/WRF/Plotting/product_images/*.png': No such file or directory
++ [ ! -d /media/robert/HDD/WRF/UPPV3.0/bin ]
++ [ ! -x /media/robert/HDD/WRF/UPPV3.0/bin/unipost.exe ]
++ [ ! -x /media/robert/HDD/WRF/UPPV3.0/bin/copygb.exe ]
++ [ ! -x /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe ]
++ [ ARW '=' ARW ]
++ tag=NCAR
++ export tag
++ [[ ARW == ARW ]]
++ [[ netcdf != netcdf ]]
++ [[ grib == grib ]]
++ [ ! -e /media/robert/HDD/WRF/Plotting/wrf_cntrl.parm ]
++ [ ! -d /media/robert/HDD/WRF/MSThesis/postprd ]
++ [ 01 -eq 0 ]
++ [ lambert '==' awips ]
++ [ lambert '==' custom ]
++ cd /media/robert/HDD/WRF/MSThesis/postprd
++ err1=0
++ test 0 -ne 0
++ [[ grib == grib ]]
++ [[ ARW == ARW ]]
++ ln -fs /media/robert/HDD/WRF/Plotting/wrf_cntrl.parm wrf_cntrl.parm
++ ln -sf /media/robert/HDD/WRF/UPPV3.0/scripts/cbar.gs .
++ ln -fs /media/robert/HDD/WRF/gcc/WRFV3/gcc/WRFV3/run/ETAMPNEW_DATA nam_micro_lookup.dat
++ ln -fs /media/robert/HDD/WRF/gcc/WRFV3/gcc/WRFV3/run/ETAMPNEW_DATA.expanded_rain hires_micro_lookup.dat
++ CRTMDIR=/media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/EmisCoeff/Big_Endian/EmisCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/AerosolCoeff/Big_Endian/AerosolCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/CloudCoeff/Big_Endian/CloudCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_g11.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_g11.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_g12.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_g12.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_g13.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_g13.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_g15.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_g15.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_mt1r.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_mt1r.TauCoeff.bin
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_mt2.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_mt2.TauCoeff.bin
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/imgr_insat3d.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/imgr_insat3d.TauCoeff.bin
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/amsre_aqua.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/amsre_aqua.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/tmi_trmm.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/tmi_trmm.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmi_f13.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmi_f13.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmi_f14.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmi_f14.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmi_f15.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmi_f15.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmis_f16.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmis_f16.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmis_f17.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmis_f17.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmis_f18.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmis_f18.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmis_f19.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmis_f19.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/ssmis_f20.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/ssmis_f20.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/seviri_m10.SpcCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/TauCoeff/ODPS/Big_Endian/seviri_m10.TauCoeff.bin ./
++ ln -fs /media/robert/HDD/WRF/UPPV3.0/src/lib/crtm2/src/fix/SpcCoeff/Big_Endian/v.seviri_m10.SpcCoeff.bin ./
++ NEWDATE=2009021212
++ export NEWDATE
++ [ 0 -le 60 ]
++ printf %02i 00
++ fhr=00
++ /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe +0 2009021212
++ NEWDATE=2009021212
++ echo 2009021212
++ cut -c1-4
++ YY=2009
++ echo 2009021212
++ cut -c5-6
++ MM=02
++ echo 2009021212
++ cut -c7-8
++ DD=12
++ echo 2009021212
++ cut -c9-10
++ HH=12
++ echo NEWDATE 2009021212
+NEWDATE 2009021212
++ echo YY 2009
+YY 2009
++ echo d02
++ cut -d d -f 2
++ dom_id=02
++ [[ ARW == ARW ]]
++ inFileName=/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_12:00:00
++ [[ ! -e /media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_12:00:00 ]]
++ [[ grib == grib ]]
++ cat
++ 1> itag 0<< \EOF
+/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_12:00:00
+netcdf
+2009-02-12_12:00:00
+NCAR
+EOF
++ rm fort.110 fort.14
++ ln -sf /media/robert/HDD/WRF/Plotting/wrf_cntrl.parm fort.14
++ mpirun -np 12 /media/robert/HDD/WRF/UPPV3.0/bin/unipost.exe
++ 1> unipost_d02.00.out 2>& 1
++ [[ ARW == ARW ]]
++ mv WRFPRS00.tm00 WRFPRS_d02.00
++ [[ ARW == ARW ]]
++ ls -l WRFPRS_d02.00
+-rw-rw-r-- 1 robert robert 178698892 Jan 31 18:33 WRFPRS_d02.00
++ err1=0
++ test 0 -ne 0
++ [[ ARW == NMM ]]
++ [[ ARW == NMB ]]
++ [ ARW '=' ARW ]
++ ln -s WRFPRS_d02.00 wrfprs_d02.00
+ln: failed to create symbolic link 'wrfprs_d02.00': File exists
++ fname=wrfprs_d02.00
++ cntlfname=wrfprs_d02_00
++ rm -f wrfprs_d02_00.ctl
++ /media/robert/HDD/WRF/Plotting/grib2ctl.pl -verf wrfprs_d02.00
++ 1> wrfprs_d02_00.ctl
++ cp wrfprs_d02_00.ctl wrfprs_d02_00.ctl_org
++ gribmap -i wrfprs_d02_00.ctl
+ grib1map:  opening GRIB file: wrfprs_d02.00 
+ grib1map:  reached end of files
+ grib1map:  writing the map...
+
++ grads -bxcl 'run /media/robert/HDD/WRF/Plotting/doplots.gs wrfprs_d02_00.ctl 00 d02 2009 02 12 12'
+
+Grid Analysis and Display System (GrADS) Version 2.0.2
+Copyright (c) 1988-2011 by Brian Doty and the
+Institute for Global Environment and Society (IGES)
+GrADS comes with ABSOLUTELY NO WARRANTY
+See file COPYRIGHT for more information
+
+Config: v2.0.2 little-endian readline printim grib2 netcdf hdf4-sds hdf5 opendap-grids,stn geotiff shapefile
+Issue 'q config' command for more detailed configuration information
+GX Package Initialization: Size = 11 8.5 
+Running in Batch mode
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_00.ctl
+ Interpolation will be performed on any data displayed from this file
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_00.ctl
+ Interpolation will be performed on any data displayed from this file
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_00.ctl
+ Interpolation will be performed on any data displayed from this file
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_00.ctl
+ Interpolation will be performed on any data displayed from this file
++ fhr=1
++ /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe +1 2009021212
++ NEWDATE=2009021213
++ [ 1 -le 60 ]
++ printf %02i 1
++ fhr=01
++ /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe +1 2009021212
++ NEWDATE=2009021213
++ cut -c1-4
++ echo 2009021213
++ YY=2009
++ cut -c5-6
++ echo 2009021213
++ MM=02
++ cut -c7-8
++ echo 2009021213
++ DD=12
++ cut -c9-10
++ echo 2009021213
++ HH=13
++ echo NEWDATE 2009021213
+NEWDATE 2009021213
++ echo YY 2009
+YY 2009
++ cut -d d -f 2
++ echo d02
++ dom_id=02
++ [[ ARW == ARW ]]
++ inFileName=/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_13:00:00
++ [[ ! -e /media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_13:00:00 ]]
++ [[ grib == grib ]]
++ cat
++ 1> itag 0<< \EOF
+/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_13:00:00
+netcdf
+2009-02-12_13:00:00
+NCAR
+EOF
++ rm fort.110 fort.14
++ ln -sf /media/robert/HDD/WRF/Plotting/wrf_cntrl.parm fort.14
++ mpirun -np 12 /media/robert/HDD/WRF/UPPV3.0/bin/unipost.exe
++ 1> unipost_d02.01.out 2>& 1
++ [[ ARW == ARW ]]
++ mv WRFPRS01.tm00 WRFPRS_d02.01
++ [[ ARW == ARW ]]
++ ls -l WRFPRS_d02.01
+-rw-rw-r-- 1 robert robert 199389822 Jan 31 18:33 WRFPRS_d02.01
++ err1=0
++ test 0 -ne 0
++ [[ ARW == NMM ]]
++ [[ ARW == NMB ]]
++ [ ARW '=' ARW ]
++ ln -s WRFPRS_d02.01 wrfprs_d02.01
+ln: failed to create symbolic link 'wrfprs_d02.01': File exists
++ fname=wrfprs_d02.01
++ cntlfname=wrfprs_d02_01
++ rm -f wrfprs_d02_01.ctl
++ /media/robert/HDD/WRF/Plotting/grib2ctl.pl -verf wrfprs_d02.01
++ 1> wrfprs_d02_01.ctl
++ cp wrfprs_d02_01.ctl wrfprs_d02_01.ctl_org
++ gribmap -i wrfprs_d02_01.ctl
+ grib1map:  opening GRIB file: wrfprs_d02.01 
+ grib1map:  reached end of files
+ grib1map:  writing the map...
+
++ grads -bxcl 'run /media/robert/HDD/WRF/Plotting/doplots.gs wrfprs_d02_01.ctl 01 d02 2009 02 12 13'
+
+Grid Analysis and Display System (GrADS) Version 2.0.2
+Copyright (c) 1988-2011 by Brian Doty and the
+Institute for Global Environment and Society (IGES)
+GrADS comes with ABSOLUTELY NO WARRANTY
+See file COPYRIGHT for more information
+
+Config: v2.0.2 little-endian readline printim grib2 netcdf hdf4-sds hdf5 opendap-grids,stn geotiff shapefile
+Issue 'q config' command for more detailed configuration information
+GX Package Initialization: Size = 11 8.5 
+Running in Batch mode
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_01.ctl
+ Interpolation will be performed on any data displayed from this file
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_01.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_01.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_01.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Cannot draw vectors/barbs -- U field all undefined
+Error in xcbar.gs: No shading information
++ fhr=2
++ /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe +2 2009021212
++ NEWDATE=2009021214
++ [ 2 -le 60 ]
++ printf %02i 2
++ fhr=02
++ /media/robert/HDD/WRF/UPPV3.0/bin/ndate.exe +2 2009021212
++ NEWDATE=2009021214
++ echo 2009021214
++ cut -c1-4
++ YY=2009
++ echo 2009021214
++ cut -c5-6
++ MM=02
++ echo 2009021214
++ cut -c7-8
++ DD=12
++ echo 2009021214
++ cut -c9-10
++ HH=14
++ echo NEWDATE 2009021214
+NEWDATE 2009021214
++ echo YY 2009
+YY 2009
++ echo d02
++ cut -d d -f 2
++ dom_id=02
++ [[ ARW == ARW ]]
++ inFileName=/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_14:00:00
++ [[ ! -e /media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_14:00:00 ]]
++ [[ grib == grib ]]
++ cat
++ 1> itag 0<< \EOF
+/media/robert/HDD/WRF/MSThesis/postrun_snowench/wrfout_d02_2009-02-12_14:00:00
+netcdf
+2009-02-12_14:00:00
+NCAR
+EOF
++ rm fort.110 fort.14
++ ln -sf /media/robert/HDD/WRF/Plotting/wrf_cntrl.parm fort.14
++ mpirun -np 12 /media/robert/HDD/WRF/UPPV3.0/bin/unipost.exe
++ 1> unipost_d02.02.out 2>& 1
++ [[ ARW == ARW ]]
++ mv WRFPRS02.tm00 WRFPRS_d02.02
++ [[ ARW == ARW ]]
++ ls -l WRFPRS_d02.02
+-rw-rw-r-- 1 robert robert 199521138 Jan 31 18:34 WRFPRS_d02.02
++ err1=0
++ test 0 -ne 0
++ [[ ARW == NMM ]]
++ [[ ARW == NMB ]]
++ [ ARW '=' ARW ]
++ ln -s WRFPRS_d02.02 wrfprs_d02.02
+ln: failed to create symbolic link 'wrfprs_d02.02': File exists
++ fname=wrfprs_d02.02
++ cntlfname=wrfprs_d02_02
++ rm -f wrfprs_d02_02.ctl
++ /media/robert/HDD/WRF/Plotting/grib2ctl.pl -verf wrfprs_d02.02
++ 1> wrfprs_d02_02.ctl
++ cp wrfprs_d02_02.ctl wrfprs_d02_02.ctl_org
++ gribmap -i wrfprs_d02_02.ctl
+ grib1map:  opening GRIB file: wrfprs_d02.02 
+ grib1map:  reached end of files
+ grib1map:  writing the map...
+
++ grads -bxcl 'run /media/robert/HDD/WRF/Plotting/doplots.gs wrfprs_d02_02.ctl 02 d02 2009 02 12 14'
+
+Grid Analysis and Display System (GrADS) Version 2.0.2
+Copyright (c) 1988-2011 by Brian Doty and the
+Institute for Global Environment and Society (IGES)
+GrADS comes with ABSOLUTELY NO WARRANTY
+See file COPYRIGHT for more information
+
+Config: v2.0.2 little-endian readline printim grib2 netcdf hdf4-sds hdf5 opendap-grids,stn geotiff shapefile
+Issue 'q config' command for more detailed configuration information
+GX Package Initialization: Size = 11 8.5 
+Running in Batch mode
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_02.ctl
+ Interpolation will be performed on any data displayed from this file
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_02.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_02.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Error in xcbar.gs: No shading information
+No hardcopy metafile open
+All files closed; all defined objects released;
+All GrADS attributes have been reinitialized
+Notice: Implied interpolation for file wrfprs_d02_02.ctl
+ Interpolation will be performed on any data displayed from this file
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Cannot contour grid - all undefined values 
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Data Request Warning:  Request is completely outside file limits
+Cannot draw vectors/barbs -- U field all undefined
+Error in xcbar.gs: No shading information
+

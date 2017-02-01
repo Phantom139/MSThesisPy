@@ -1,14 +1,14 @@
-dset ^wrfprs_d01.01
-index ^wrfprs_d01.01.idx
+dset ^wrfprs_d02.00
+index ^wrfprs_d02.00.idx
 undef 9.999E+20
-title wrfprs_d01.01
+title wrfprs_d02.00
 *  produced by grib2ctl v0.9.13
-* command line options: -verf wrfprs_d01.01
+* command line options: -verf wrfprs_d02.00
 dtype grib 255
-pdef 1065 720 lccr 24.552000 -117.183000 1 1 39.516000 39.516000 -96.631000 4000 4000
-xdef 1065 linear -117.183000 0.0399782923571348
-ydef 720 linear 24.552000 0.0363636363636364
-tdef 1 linear 01Z09jan2009 1mo
+pdef 820 425 lccr 30.273000 -111.851000 1 1 38.272000 38.272000 -102.674000 4000 4000
+xdef 820 linear -111.851000 0.0421054170193698
+ydef 425 linear 30.273000 0.0363636363636364
+tdef 1 linear 12Z12feb2009 1mo
 *  z has 25 levels, for prs
 zdef 25 levels
 1000 975 950 925 900 875 850 825 800 775 750 700 650 600 550 500 450 400 350 300 250 200 150 100 50
